@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.huahai.oracle.dao.UserMapper">
+	<!-- User selectAll(); -->
+	<select id="selectAll" resultType="cn.huahai.oracle.bean.UserClass" >
+		SELECT ID,CLASSNAME FROM USERINFO1 WHERE 
+		ID=6 or ID=7
+	</select>
+	<!-- <select id="selectAllUser" resultType="cn.huahai.oracle.bean.User">
+		SELECT name,age FROM userinfo
+	</select> -->
+	
+	<insert id="insertUser" parameterType="cn.huahai.oracle.bean.UserClass">
+		INSERT INTO USERINFO1 VALUES ('${id}','${className}')
+	</insert>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
